@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--Iframe:Sayfana başka bir web sayfasını, YouTube videosunu, haritayı veya başka bir dış kaynağı yerleştirmek için kullanılır.-->
+<!--sandbox:iframe içindeki içeriğin bazı işlemleri yapmasını kısıtlar. (Örn: form gönderme, script çalıştırma vs.)-->
+<!--allowfullscreen:iframe’de tam ekran izleme izni verir.-->
+<!--VİDEO GÖMMEK İÇİN 
+1:YouTube'da istediğin videoyu aç.
+2:Videonun altındaki "Paylaş" (Share) butonuna tıkla.
+3:Açılan pencerede "Yerleştir" (Embed) seçeneğine tıkla.
+4:Karşına bir <iframe> kodu çıkacak.
+5:Bu kodu kopyalayıp HTML içine yapıştırabilirsin.
+-->
+<!--GOOGLE HARİTA GÖMMEK İÇİN
+https://maps.google.com adresine git.
+1:Yerini göstermek istediğin konumu arat.
+2:Sol üstteki menüden veya doğrudan "Paylaş" simgesine tıkla.
+3:Açılan pencerede "Haritayı yerleştir" (Embed a map) sekmesine geç.
+4:Aşağıda oluşan <iframe> kodunu kopyala.
+-->
+<!--TAVSİYELER 
+1:Kodları kopyaladıktan sonra HTML belgesinde <body> içine yapıştırabilirsin.
+2:Mobil görünümde orantılı olması için width="100%" ve height="auto" gibi değerler verebilirsin.
+3:Gömülü içeriğin güvenliği için sandbox gibi öznitelikleri araştırabilirsin.
+-->
+<body>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/mdPfWXuGUBs?si=kZWY3MU8Jt9t0UxV"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br><br>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24133.285918400234!2d29.219166371715293!3d40.879318892483695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadc9f835830e9%3A0xf5e15cbe86630278!2sPendik%2C%20Kaynarca%2C%2034890%20Pendik%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1753129275683!5m2!1str!2str"
+        width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+
+</html>
