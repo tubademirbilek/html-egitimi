@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUBA DEMİRBİLEK</title>
+    <!--
+    HTML'de <div> etiketi, sayfa içinde içerikleri gruplamak için kullanılır. Bu etikete özel görünüm kazandırmak için <head> etiketinin içine <style> bloğu açılarak bir sınıf tanımlanır (örneğin .kutu). Bu sınıfa genişlik (width), yükseklik (height), arka plan rengi (background-color) gibi özellikler verilebilir. Yazıyı yatayda ortalamak için text-align: center; kullanılır. Eğer bu div'lerin yan yana durması isteniyorsa, display: inline-block; özelliği eklenir. Bu sayede div tüm satırı kaplamaz ve yanına başka div'ler yerleşebilir. Yan yana duran kutuların üst hizalarının aynı olması için vertical-align: top; özelliği kullanılır. CSS ile bu tanımlar yapıldıktan sonra <body> içinde <div class="kutu">İçerik</div> şeklinde çağrılarak istenilen içerik gösterilebilir. Her div’e bu sınıf atanarak sayfa içinde farklı kutular oluşturulabilir.
+    -->
+    <style>
+
+        .divÖzellik {
+            width: 200px;
+            height: 300px;
+            background-color: cornflowerblue;
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .divÖzellik2 {
+            width: 649px;
+            height: 200px;
+            background-color: darksalmon;
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+           
+        }
+        .divÖzellik3{
+            width: 100%;
+            height: 200px;
+            background-color: blue;
+            vertical-align: 10px;
+            text-align: center; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="divÖzellik">
+
+        <p>Tuba Demirbilek</p>
+
+    </div>
+    <div class="divÖzellik2">
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing/p>
+
+    </div>
+    <div class="divÖzellik3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium corrupti asperiores fuga iste, deleniti alias, praesentium sunt consequuntur ullam voluptates cum modi facilis officia id excepturi earum reprehenderit enim iusto!</p>
+    </div>
+</body>
+
+</html>
