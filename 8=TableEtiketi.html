@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+<!--<table> etiketi, HTML'de tablo başlatmak için kullanılır. İçine başka etiketler yerleştirilerek tablo yapısı oluşturulur.
+----
+<table>	Tablonun başlangıcını belirtir.
+<tr>	Bir tablo satırını (row) oluşturur. (table row)
+<td>	Tablodaki veri hücresini tanımlar. (table data)
+<th>	Başlık hücresi (koyu ve ortalanmış olur). (table header)
+ -->
+</head>
+<!--Table:Tablo: Tablo oluşturur.Çerçeveli olması için table içine border açıp sayı örneğin "1" yazmak gerekiyor.Örneğin : <table border="1">
+-"tr" etiketi table etiketinin içine açılır.Tablonun içine satır oluşturur.Kaç tane açarsan okadar satır oluşturur.
+-"td" etiketi açtığın "tr" satırına veri girmek için "tr""etiketinin içine açılır. İçine veri yazılır.Kolon oluşturur.Kaç tane açarsan okadar kolon olur"
+-"th" Tablonun başlığı anlamına gelir ilk "tr" satırının içine "th" açarsan başlık gibi kalın yazı görünür.
+-"colspan"Sütunları birleştirip tek satırda yazar. Kodu "<th colspan="3">olarak yazarsın." Yaptığın tabloda kaç kolon varsa sayıyı ona göre vermelisin.
+-"Rowspan"Satırları bisleştirir. Etiket "<td rowspan="2""olarak yazılır. Kaç sütun varsa o kadar sayı bildirirsin.
+
+
+-->
+
+<body>
+    <center>
+        <table border="1">
+            <tr>
+                <th>İsim</th>
+                <th>Soyisim</th>
+                <th>Yaş</th>
+            </tr>
+            <tr>
+                <td>Tuba</td>
+                <td>Demirbilek</td>
+                <td>33</td>
+            </tr>
+        </table>
+        <hr>
+        <!--Colspan Örneği-->
+        <table border="1">
+            <tr>
+                <th colspan="3">Kişisek Bilgiler</th>
+            </tr>
+            <tr>
+                <td>Tuba</td>
+                <td>Demirbilek</td>
+                <td>33</td>
+            </tr>
+        </table>
+        <hr>
+        <!--Rowspan Örneği-->
+        <table border="1">
+            <tr>
+                <th>İsim</th>
+                <th>Soyisim</th>
+                <th>Yaş</th>
+            </tr>
+            <tr>
+                <td rowspan="2">SOYİSİM</td>
+                <td>Demirbilek</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>Demirbilek</td>
+                <td>40</td>
+            </tr>
+        </table>
+        <hr>
+    </center>
+</body>
+
+</html>
