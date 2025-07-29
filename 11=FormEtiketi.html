@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form etiketi</title>
+</head>
+<!--
+FORM ETİKETİ:
+HTML'de <form> etiketi, kullanıcıdan bilgi almak ve bu bilgileri sunucuya göndermek için kullanılır. Formun içine <input> gibi elemanlar yerleştirilir. <input type="text"> tek satır metin (örneğin ad, soyad, şehir) girişi için kullanılırken, <input type="password"> yazılan metni gizli (••••) göstererek şifre girişi yapılmasını sağlar. <input type="email"> ise e-posta adresi girişi içindir ve girilen değerin @ ve .com gibi kurallara uygun olup olmadığını kontrol eder. Form içeriğini daha düzenli göstermek için <table> etiketiyle satır-sütun yapısı kullanılabilir. Örneğin bir satıra etiket (Adınız), diğerine <input> yerleştirilerek hizalama sağlanır. <input> etiketine çeşitli özellikler (attributes) eklenebilir: name (sunucuya gidecek veri adı), placeholder (kutunun içindeki açıklama yazısı), value (başlangıçta yazılı olan değer), maxlength (maksimum karakter sayısı), required (alanın boş geçilmesini engeller), disabled (alanı pasifleştirir, gri olur), autocomplete (tarayıcının otomatik doldurmasını açar veya kapatır). Tablolu yapı özellikle başlangıç seviyesinde pratiklik sağlarken, daha modern uygulamalarda bu düzenlemeler CSS (örneğin flexbox) ile yapılır
+-->
+
+<body>
+    <form>
+        <!--<input type="text">-->
+        <!--Name Attributes--><!--Form verisinin sunucuya göderilecek adı-->
+        <table border="1">
+            <tr>
+                <td>
+                    Kullanıcı Adı: <input type="text" name="kullanıcı_adı">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--Placeholder Attributes--><!--Kutunun içine açıklama ekler-->
+        <table border="1">
+            <tr>
+                <td>
+                    <input type="text" placeholder="Adınızı Giriniz">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--Value Attributes--><!--Kutunun başlangıç değeri-->
+        <table border="1">
+            <tr>
+                <td>
+                    <input type="text" value="TUBA">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--Maxlength Attributes--><!--Maksimum karakter sayısı-->
+        <table border="1">
+            <tr>
+                <td>
+                    <input type="text" maxlength="10" placeholder="En fazla 10 karakter">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--Required Attributes--><!--Doldurulmadan gönderilemez-->
+        <table border="1">
+            <tr>
+                <td>
+                    <input type="text" required placeholder="Boş Bırakılamaz">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--Disabled Attributes-->
+        <table border="1">
+            <tr>
+                <td>
+                    <input type="text" value="Pasif Kutu" disabled>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--Autocomplete Attributes--><!--Tarayıcının otomatik doldurma özelliği-->
+        <table border="1">
+            <tr>
+                <td>
+                    <input type="text" placeholder="Tarayıcı Hatırlamasın" autocomplete="off">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <br>
+    <form>
+        <!--<input type="password">--><!--Kullanıcının girdiği karakteri gizli tutar.-->
+        <table border="1">
+            <tr>
+                <td>Şifre:</td>
+                <td>
+                    <input type="password">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--Placeholder Attributes--><!--Kutunun içine açıklama ekler-->
+        <table border="1">
+            <tr>
+                <td>Şifre:</td>
+                <td><input type="password" placeholder="Şifrenizi Giriniz"></td>
+            </tr>
+        </table>
+        <br>
+        <!--Name Attributes--><!--Form verisinin sunucuya göderilecek değeri-->
+        <table border="1">
+            <tr>
+                <td>
+                    Şifre:
+                </td>
+                <td>
+                    <input type="password" name="Kullanıcı_Şifresi">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--Maxlength Attributes--> <!--Maksimum Karakter-->
+        <table border="1">
+            <tr>
+                <td>Şifre</td>
+                <td><input type="password" maxlength="10" placeholder="En Fazla 10 Karakter"></td>
+            </tr>
+        </table>
+        <br>
+        <!--Required Attributes--><!--Doldurulmadan gönderilemez-->
+        <table border="1">
+            <tr>
+                <td>Şifreniz:</td>
+                <td><input type="password" required placeholder="Zorunlu"></td>
+            </tr>
+        </table>
+        <br>
+        <!--Autocomplete Attribute--><!--Tarayıcı Şifre Önermesim-->
+        <table border="1">
+            <tr>
+                <td>Şifre:</td>
+                <td><input type="password" autocomplete="off"> </td>
+            </tr>
+        </table>
+        <br>
+        <!--Volue Attributes--><!--Başlangıç değeri (Test için kullanılır.)-->
+        <table border="1">
+            <tr>
+                <td>Şifreniz:</td>
+                <td><input type="password" value="12345"></td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <br>
+    <form>
+        <!--<input type="email">--><!--e-posta adresi girmesi için kullanılır-->
+        <!--"e-mail"Attributes'leri "name-placeholder-required-value-maxlength-autocomplete=on/of-readonly-disabled-multiple-"-->
+        <table border="1">
+            <tr>
+                <td>E-Posta:</td>
+                <td><input type="email" </td>
+            </tr>
+        </table>
+        <br>
+        <!--Volue Attributes "Kutunun içeriğini varsayılan olarak belirler"-->
+        <table border="1">
+            <tr>
+                <td>
+                    E-Posta:<input type="email" value="E-Mail">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--Readonly Attributes "Kullanıcı içeriği görebilir ama değiştiremez"-->
+        <table border="1">
+            <tr>
+                <td>
+                    <input type="email" value="demirbilek.@gmail.com" readonly>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--Disablet Attributes "İnput devre dışı bırakılır. Ne değiştirilebilir ne form göderilirken bu veri dahil edilir."-->
+        <table border="1">
+            <tr>
+                <td>
+                    Tuba <input type="email" disabled>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--Multiple Attributes "Kullanıcının birden fazla e-posta girmesine izin verir."-->
+        <table border="1">
+            <tr>
+                <td>
+                    e mail :<input type="email" multiple>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <br>
+    <form>
+        <!--input type="checkbox" Kullanıcıya birden fazla seçenek sunmak için kullanılır-->
+        <!-- Checkbox Attributes'ler "name-value-checked-id="..."ve <label for="..."-disabled-required-" -->
+        <table border="1">
+            <tr>
+                <td>
+                    TUBA <input type="checkbox"> <br>
+                    ERGÜN <input type="checkbox">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--Name ve Value Attributes "Form göderildiğinde sunucuya hangi veriyle göderileceğini belirler
+        .Çok sayıda checkbox varsa hepsi aynı name ile göderilebilir"
+        name="..." →  Kutunun adıdır. Form gönderildiğinde bu adla veri gönderilir.
+        value="..." → Kutunun değeridir. Hangi seçenek işaretlenmiş, bunu belirler. -->
+        <h4>Hobilerim: </h4>
+        <table border="1">
+            <tr>
+                <td>
+
+                    Kitap Okumak:<input type="checkbox" name="hobi" value="Kitap Okumak"> <br>
+                    Yüzmek:<input type="checkbox" name="hobi" value="Yüzmek"> <br>
+                    Yürüyüş Yapmak <input type="checkbox" name="hobi" value="Yürüyüş Yapmak">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--Checked Attributes "Sayfa yüklendiğinde kutunun önceden seçili olmasını sağlar"-->
+        <table border="1">
+            <tr>
+                <td>
+                    Kitap Okumak:<input type="checkbox" name="hobi" value="Kitap Okumak" checked> <br>
+                    Yüzmek:<input type="checkbox" name="hobi" value="Yüzmek"> <br>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--id ve label form "Etiket (label) ile kutuyu ilişkilendirir. Böylece kullanıcı yazıya tıklayıncada kutu işaretlenir"-->
+        <table border="1">
+            <tr>
+                <td>
+                    Kitap Okumak:<input type="checkbox" id="Kitap" name="hobi" value="Kitap Okumak">
+                    <label for="Kitap">Kitap</label>
+                </td>
+            </tr>
+        </table>
+        <!--TOPLU ÖRNEK-->
+        <p>HOBİLERİNİZİ SEÇİN</p>
+        <input type="checkbox" id="kitap" name="hobi" value="kitap">
+        <label for="kitap">Kitap Okumak</label><br>
+        <input type="checkbox" id="muzik" name="hobi" value="muzik" checked>
+        <label for="muzik">Müzik Dinlemek</label><br>
+        <input type="checkbox" id="spor" name="hobi" value="spor">
+        <label for="spor">Spor Yapmak</label> <br>
+        <td>
+            <input type="reset" value="Temizle"><!--Value isim verir-->
+        </td>
+    </form>
+    <br><br>
+    <!--input type="radio" Radio buton kullanıcıya bir grup içerisinden yanlızca bir seçenek seçme hakkı tanır. Aynı name değerine sahip radio butonlar bir grup oluşturur.-->
+    <!--Radio Attrubite "name-value-id,laber for-checked-disabled-required-"-->
+    <form>
+        <!--Toplu Örnek-->
+        <p>Cinsiyetinizi Seçin:</p>
+        <table border="1">
+            <tr>
+                <td>
+
+                    Kadın<input type="radio" name="cinsiyet" value="Kadın" id="Kadın">
+                    <label for="Kadın">Kadın</label><br>
+                    Erkek<input type="radio" name="cinsiyet" value="Erkek" id="Erkek" checked>
+                    <label for="Erkek">Erkek</label><br>
+                    Belirtmek İstemiyorum<input type="radio" name="cinsiyet" value="Belirtmek İstemiyorum"
+                        id="Belirtmek İstemiyorum">
+                    <label for="Belirtmek İstemiyorum">Belirtmek İstemiyorum</label>
+                </td>
+                <td>
+                    <input type="reset" value="Temizle"><!--Value isim verir-->
+                </td>
+            </tr>
+        </table>
+    </form><br><br>
+    <!--input type="file" Bu imput türü kullanıcıların bilgisayarlarından dosya seçip yüklemelerini sağlar-->
+    <!--File Attributleri "name-accept="..."-multiple-required-disabled-"-->
+    <form>
+        <!--Name Form gönderildiğinde seçilen dosyanın sunucuya gönderilirken kullanılacak isim.-->
+        <table>
+            <tr>
+            <tr>
+                <input type="file" name="dosya">
+            </tr>
+            </tr>
+        </table>
+        <br>
+        <!--accept="..." hangi dosya türünü seçebileceğini belirtir-->
+        <table>
+            <tr>
+            <tr>
+                image/* <input type="file" accept="image/*"><br>
+                pdf <input type="file" accept="pdf"><br>
+                jpg,.png,.gif <input type="file" accept=".jpg,.png,.gif">
+            </tr>
+            </tr>
+        </table>
+        <br>
+        <!--multiple "kullanıcıya birden fazla dosya seçme izni verir"-->
+        <table>
+            <tr>
+            <tr>
+                birden fazla seçim<input type="file" multiple>
+            </tr>
+            </tr>
+        </table>
+        <br>
+        <!--requried "Dosya seçimini zorunlu hale getirir.Kullanıcı dosya seçmeden formu gönderemez"-->
+        <table>
+            <tr>
+                <td>
+                    zorunlu seçim <input type="file" required>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--disablet "dosya seçmeye izin vermez"-->
+        <table>
+            <tr>
+                <td>
+                    dosya seçmeye izin vermez <input type="file" disabled>
+                </td>
+
+            </tr>
+        </table>
+    </form>
+    <br><br>
+    <form>
+        <!--Submit "Formu göndermek için kullanılan bir butondur."-->
+        <table>
+            <tr>
+                <td>
+                    <input type="submit" value="Gönder"> <!--Value ismini verir.-->
+                    <input type="submit" name="GönderButonu" value="Kaydet">
+                    <!--Form gönderildiğinde bu butonunda ismi sunucuya gider.-->
+                    <input type="submit" value="Gönder" disabled> <!--Buton devre dışı olur tıklanamaz-->
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br><br>
+    <!--Reset butonu, formun içindeki tüm alanları temizlemeye yeni başlangıç haline döndürmeye yarar.-->
+    <!--"Reset butonu sadece aynı <form> etiketi içindeki alanları temizler.Eğer bir alanın içinde value varsa resete basıldığında o ilk yazdığı değere döner,tamamen boş olmaz"-->
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <input type="reset" value="Temizle"><!--Value isim verir-->
+                    <input type="reset" value="Temizle" disabled> <!--Devre dışı bırakır-->
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br><br>
+    <!--<textarea> etiketi,çok satırlı bir metin girişi alanı oluşturur.-->
+    <!--<textarea attributesleri "name-id-rows-cols-placeholder-maxlength-required-readonly-disabled-autofocus"-->
+    <form>
+        <!--name ve id-->
+        <table>
+            <tr>
+                <label for="yorum">Açıklama yap!</label><br>
+                <textarea name="yorum" id="yorum"></textarea>
+            </tr>
+        </table>
+        <br>
+        <!--rows(yükseklik) ve cols(genişlik)-->
+        <table>
+            <tr>
+                <td>
+                    <textarea name="yorum" id="yorum" cols="30" rows="15"></textarea>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--placeholder "kutu içinde silik yazı olarak görünür örnek verilir"-->
+        <!--maxlength"kaç karaktere izin verileceğine karar verir-->
+        <table>
+            <tr>
+                <td>
+                    <textarea name="acıklama" id="acıklama" placeholder="Lütfen Mesajınızı Giriniz Max 50 Karakter"
+                        maxlength="30"></textarea>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!--required "boş bırakılırsa form gönderilmez"-->
+        <!--readonly"Kullanıcı metni görebilir ama değiştiremez"-->
+        <!--Bu iki attributes aynı form içinde kullanılamaz.Birbirini etkiliyor.-->
+        <table>
+            <tr>
+                <td>
+                    <textarea name="açıklama" id="açıklama" readonly placeholder="Metin zorunludur"></textarea><br>
+                     <textarea name="açıklama" id="açıklama" readonly placeholder="Metni değiştiremezsin"></textarea>
+                </td>
+
+            </tr>
+        </table>
+    </form>
+    <br><br>
+    <!--"select:Açılır liste oluşturur."-->
+    <!--"option:Bu açılır listenin içinde seçenek belirtir."-->
+    <form>
+        <p>Bu yaz nerede olmak istersin :</p>
+        <select name="Şehir" id="Şehir">
+            <option value="Diyarbakır">Diyarbakır</option>
+            <option value="Ankara">Ankara</option>
+            <option value="İstanbul">İstanbul</option>
+            <option value="Kocaeli">Kocaeli</option>
+            <option value="Rize">Rize</option>
+        </select>
+    </form>
+</body>
+
+</html>
